@@ -45,7 +45,7 @@ seed data by running `rake db:seed`.
     * Change the name of the tennant
     * Change the apartment the tennant lives in
 * See the details of a specific apartment
-    * See the apartment's name
+    * See the apartment's address
     * See a list of the tennants living in the apartment
     * NOTE: You will need an ID in the path for this page!
 * See a list of all tennants 
