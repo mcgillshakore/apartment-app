@@ -1,0 +1,20 @@
+<h3><%=@tenant.name%></h3>
+<p><%=@tenant.apartment.address%></p>
+   <form method="POST" action="/tenants/<%=@tenant.id%>">
+   <input type="hidden" name="_method" value="patch">
+   <label>Name<label>
+    <input name="tenant_name" type="text"/>
+    <label>Apartments</label>
+        <select name="apartment_name_id">
+            <% @all_apartments.each do | apartment| %>
+                <option value="<%= apartment.id %>"><%= apartment.address %></option>
+            <% end %>
+        </select>
+    <input type="submit" value="Update Tenant"/>
+   </form>
+
+
+<form method="POST" action="/delete_tenant/<%= @tenant.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Tenant" >
+</form>
